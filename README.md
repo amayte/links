@@ -1,4 +1,3 @@
-# links
-Agregador de links
+# Agregador de links
 
 https://amayte.github.io/links/
