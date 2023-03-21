@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    max-width: 1920px;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(#91b28f), to(#cee5cc)) fixed;
+    }
+  
+  /* box container */
+  .transp-box {
+    width: 100%;
+    max-width: 600px;
+    max-height: none;
+    padding: 3rem 3rem;
+    display: grid;
+    align-items: center;
+    background-color: rgba(0,0,0,.1);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    text-align: justify;
+    font-family: 'Pacifico', cursive;
+    color: white;
+  }
+  
+  /* grid container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px;
+  }
+  
+  .grid-item {
+    padding: 10px;
+  }
+  
+  /* button - green */
+  .button-1 {
+    appearance: button;
+    background-color: #549750;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+    font-family: 'Tilt Neon', cursive;
+  }
+  
+  .button-1:after {
+    background-clip: padding-box;
+    background-color: #69bc64;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .button-1:main,
+  .button-1:focus {
+    user-select: auto;
+  }
+  
+  .button-1:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  .button-1:disabled {
+    cursor: auto;
+  }
+  
+  /* button - blue */
+  .button-0 {
+    appearance: button;
+    background-color: #509697;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+    font-family: 'Tilt Neon', cursive;
+  }
+  
+  .button-0:after {
+    background-clip: padding-box;
+    background-color: #64bcbf;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .button-0:main,
+  .button-0:focus {
+    user-select: auto;
+  }
+  
+  .button-0:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  .button-0:disabled {
+    cursor: auto;
+  }
+  
+  /* button - games */
+  .game-btn {
+      background: transparent;
+      border: none !important;
+     }
+  
+  .game-btn:hover {
+     filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  /* pop up */
+  .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: grey;
+      font-family: 'Tilt Neon', cursive;
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+  }
+  .overlay:target {
+      visibility: visible;
+      opacity: 1;
+  }
+  .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      width: 30%;
+      position: relative;
+      transition: all 5s ease-in-out;
+  }
+  .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: 'Tilt Neon', cursive;
+  }
+  .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+  }
+  .popup .close:hover {
+      color: #06D85F;
+  }
+  .popup .content {
+      max-height: 30%;
+      overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .game-btn{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+  
+  /* tooltip */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: grey;
+    text-align: center;
+    font-family: 'Tilt Neon', cursive;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  
+  /* tooltip dino */
+  .tooltip2 {
+    position: relative;
+    display: inline-block;
+    }
+  
+  .tooltip2 .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: grey;
+    text-align: center;
+    font-family: 'Tilt Neon', cursive;
+    font-size: 14px;
+    border-radius: 50px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 75%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip2 .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+  
+  .tooltip2:hover .tooltiptext {
+    visibility: visible;
+  }
+  
+  /* dinosaur */
+  .dinobody, .dinoleg {
+    fill:#69bc64;
+  }
+  
+  .dinoeye {
+    fill:black;
+  }
+  
+  .dinoshadow {
+    fill:#447941;
+  }
+  
+  .dinostroke {
+    fill:none;
+    }
+  
+  .dino-body {
+    animation: bobbing ease-in-out 2s;
+    animation-iteration-count: infinite;
+  }
+  
+  .dino-leg-bg-front, 
+  .dino-leg-fg-back {
+    animation: walking-front ease-in-out 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  .dino-leg-fg-front,
+  .dino-leg-bg-back {
+    animation: walking-back ease-in-out 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes walking-front{
+    0% { transform:  translate(0px,0px); }
+    50% { transform:  translate(5px,2px); }
+    100% { transform:  translate(0px,0px); }
+  }
+  
+  @keyframes walking-back{
+    0% { transform:  translate(5px,2px); }
+    50% { transform:  translate(0px,0px); }
+    100% { transform:  translate(5px,2px); }
+  }
+  
+  @keyframes top-line-shift{
+    0% { transform:  translate(0px,0px); }
+    50% { transform:  translate(8px,0px); }
+    100% { transform:  translate(0px,0px); }
+  }
+  
+  @keyframes lower-line-shift{
+    0% { transform:  translate(8px,0px); }
+    50% { transform:  translate(0px,0px); }
+    100% { transform:  translate(8px,0px); }
+  }
+  
+  /* Not all browsers support this */
+  @media only screen and (max-width: 1140px) {
+    .transp-box {
+      padding: 8rem 4rem;
+    }
+  }
+  
+  @media only screen and (max-width: 840px) {
+    body {
+      padding: 1.5rem;
+    }
+  
+    .transp-box {
+      padding: 4rem;
+      height: auto;
+    }
+  
+   @media only screen and (max-width: 600px) {
+    .transp-box {
+      padding: 1.5rem;
+    }
+    }
+    
+    /* dinotext */
+    .dinotext {
+    margin: auto;
+    color: grey;
+    font-size: 14px;
+    font-family: 'Tilt Neon', cursive;
+    padding: 2px;
+    }
