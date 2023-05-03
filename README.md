@@ -1,4 +1,4 @@
-# Agregador de links
+# Link aggregator with SVG dinosaur animation
 
 (personal project)
 
